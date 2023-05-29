@@ -1,0 +1,62 @@
+body{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),url("../images/backgroundImage.jpg");
+    background-size: cover;
+}
+
+#loginForm{
+    position: absolute;
+    width: 428px;
+    height: 428px;
+    background: #F5F5F5;
+    border-radius: 25px;
+    left: calc(50% - 428px/2);
+    top: calc(50% - 428px/2);
+}
+#logo{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: calc(50% - 100px/2);
+    top: calc(50% - 100px/2 - 142px);
+}
+#email{
+    position: absolute;
+    width: 278px;
+    height: 42px;
+    left: 70px;
+    top: 140px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    border-style: solid;
+
+}
+#password{
+    position: absolute;
+    width: 278px;
+    height: 42px;
+    left: 70px;
+    top: 220px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    color: black;
+    border-style: solid;
+}
+#login{
+    position: absolute;
+    width: 186px;
+    height: 42px;
+    left: 110px;
+    top: 300px;
+    background: #174E80;
+    border: 1px solid #000000;
+    color: #F5F5F5;
+    border-radius: 10px;
+}
+
+p{
+    left:150px;
+    top: 400px;
+}
+a{
+    color: darkred;
+}
