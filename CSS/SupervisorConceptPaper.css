@@ -107,7 +107,7 @@ nav img{
 }
 .ConceptDetails{
     width: 100%;
-    height: 600px;
+    height: 650px;
     border-radius: 25px;
     padding: 10px;
 
@@ -115,30 +115,30 @@ nav img{
 .ConceptDetails h2{
     text-align:center;
 }
-form{
-    display: inline;
+.list-container{
+    width: 100%;
+    height: 300px;
+    display:grid;
+    grid-gap: 10px;
+    border-radius: 20px;
+    color: black;
+    background-color: white;
+    padding: 10px;
 }
-#uploadFile {
-background-color:#D9D9D9;
-    border-radius: 5px;
-}
-#description{
-    width: 300px;
-    height: 100px;
+.row{
+    height: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    margin-bottom: 2px;
+    padding: 10px;
     background-color:#D9D9D9;
-    border-radius: 5px;
+    border-radius: 16px;
 }
-.form-row{
-    display: block;
-    margin-bottom: 30px;
-}
-#submit{
-    width: 186px;
-    height: 30px;
+.row h3{
     text-align: center;
-    background: #174E80;
-    border: 1px solid #000000;
-    color: #F5F5F5;
-    border-radius: 10px;
-    margin-left: 150px;
+    margin: 0;
+}
+.row p{
+    margin: 0;
 }

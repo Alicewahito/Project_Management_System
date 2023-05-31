@@ -110,16 +110,12 @@ nav img{
     height: 600px;
     border-radius: 25px;
     padding: 10px;
-
 }
 .ConceptDetails h2{
     text-align:center;
 }
-form{
-    display: inline;
-}
-#uploadFile {
-background-color:#D9D9D9;
+.chooseFile{
+    background-color:#D9D9D9;
     border-radius: 5px;
 }
 #description{

@@ -144,7 +144,7 @@ nav img{
 .row{
     height: 20px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
     margin-bottom: 2px;
     padding: 10px;
