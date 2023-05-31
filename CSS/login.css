@@ -11,42 +11,25 @@ body{
     border-radius: 25px;
     left: calc(50% - 428px/2);
     top: calc(50% - 428px/2);
+    text-align: center;
 }
 #logo{
     width: 100px;
     height: 100px;
-    position: absolute;
-    left: calc(50% - 100px/2);
-    top: calc(50% - 100px/2 - 142px);
 }
-#email{
-    position: absolute;
+#form input{
+    margin-bottom: 20px;
+    margin-top: 10px;
     width: 278px;
     height: 42px;
-    left: 70px;
-    top: 140px;
     background: #D9D9D9;
     border-radius: 10px;
     border-style: solid;
+}
 
-}
-#password{
-    position: absolute;
-    width: 278px;
-    height: 42px;
-    left: 70px;
-    top: 220px;
-    background: #D9D9D9;
-    border-radius: 10px;
-    color: black;
-    border-style: solid;
-}
 #login{
-    position: absolute;
     width: 186px;
     height: 42px;
-    left: 110px;
-    top: 300px;
     background: #174E80;
     border: 1px solid #000000;
     color: #F5F5F5;
