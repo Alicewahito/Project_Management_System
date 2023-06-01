@@ -2,39 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Concept Paper</title>
+    <title>ProjectHub | Concept Paper</title>
+    <link href="../css/main.css" rel="stylesheet"/>
   <link href="../css/supervisorConceptPaper.css" rel="stylesheet">
 </head>
 <body>
-<header>
-  <div class="info">
-    <img id="logo" src="../images/Logo.png" alt="logo"/>
-    <div class="motto">
-      <h1> Kenyatta University</h1>
-      <p> Transforming Higher Education...Enhancing Lives</p>
-    </div>
-  </div>
-  <div class="right-header">
-    <img id="notification" src="../images/notification.png">
-    <div class="profile">
-      <img src="../images/profile.png">
-      <p>profile</p>
-    </div>
-  </div>
-</header>
-<div class="home">
-  <div class="nav-bar">
-    <nav>
-      <ul>
-        <li class="nav-list"><img src="../images/dashboard.png"><a class="nav-link">Dashboard </a></li>
-        <li class="nav-list"> <a class="nav-link">Concept paper</a></li>
-        <li class="nav-list"> <a class="nav-link">Proposal </a></li>
-        <li class="nav-list"> <a class="nav-link">System Analysis </a></li>
-        <li class="nav-list"> <a class="nav-link">System Design </a></li>
-        <li class="nav-list"> <a class="nav-link">Implementation </a></li>
-      </ul>
-    </nav>
-  </div>
+    <?php
+    require_once "../reusables/header.php"
+    ?>
+<div class="container">
+    <?php
+    require_once "../reusables/navigationBar.php"
+    ?>
   <div>
     <div class="conceptPaper rectangle">Concept Paper</div>
     <div class="ConceptDetails rectangle">
