@@ -5,6 +5,7 @@
     <title>ProjectHub | Concept Paper</title>
     <link href="../css/main.css" rel="stylesheet"/>
     <link href="../css/conceptPaper.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/4d187605a0.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <?php
@@ -14,7 +15,7 @@ require_once "../reusables/header.php"
       <?php
       require_once "../reusables/navigationBar.php"
       ?>
-    <div>
+    <div class="content">
       <div class="conceptPaper rectangle">Concept Paper</div>
       <div class="ConceptDetails rectangle">
         <h2>Concept Paper</h2>

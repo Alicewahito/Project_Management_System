@@ -14,26 +14,39 @@
     <?php
     require_once "../reusables/navigationBar.php"
     ?>
-  <div>
+  <div class="content">
     <div class="conceptPaper rectangle">Concept Paper</div>
     <div class="ConceptDetails rectangle">
-      <h2>Concept Paper</h2>
-      <p>Student Name:""</p>
-      <p> Deadline: "" </p>
-      <p> project title: </p>
-      <form>
-        <div class="form-row">
-          <label for="description">Project Description:</label><input id="description" name="description">
-        </div>
-        <div class="form-row>
-          <a href="" download>Download File</a>
-        </div>
-        <div class="form-row">
-          <label for="remarks">Remarks:</label><input id="remarks" name="remarks">
-        </div>
-        <button id="submit" type="submit">Submit</button>
-      </form>
+      <h2>Submission Status</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <p class="odd">Student Name</p>
+                <p class="even"> Due Date</p>
+                <p class="odd"> Grading Status </p>
+                <p class="even"> File Submission </p>
+                <p class="odd">Remarks:</p>
+            </div>
+            <div class="grid-item">
+                <p id="stName" class="odd">Alice Wahito</p>
+                <p id="dueDate" class="even"> May 31,2023 5:00pm</p>
+                <p id="grading-status" class="odd"> Pending</p>
+                <p class="even"> pdf</p>
+                <ul id="remarks-list" class="odd">
 
-
+                </ul>
+            </div>
+        </div>
+        <button id="submit" type="submit">Submit Remarks</button>
+    </div>
+        <div class="grading rectangle">
+            <h2> Award Marks </h2>
+            <div class="grading-grid">
+                <p>Student Name</p>
+                <p id="submission-type">Concept Paper</p>
+                <input id="marks">
+            </div>
+            <button id="submit" type="submit">Submit Marks</button>
+        </div>
+  </div>
 </body>
 </html>

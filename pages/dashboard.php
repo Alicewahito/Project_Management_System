@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ProjectHub | Dashboard</title>
-    <link href="../css/main.css" rel="stylesheet"/>
     <link href="../css/dashboard.css" rel="stylesheet"/>
-    <script src="https://kit.fontawesome.com/4d187605a0.js" crossorigin="anonymous"></script>
+    <?php
+    require_once "../reusables/head.php"
+    ?>
 </head>
 <body>
     <?php
@@ -18,7 +19,7 @@
         ?>
         <div class="tasks-container">
             <div class="dashboard rectangle">
-                <h2>Dashboard</h2>
+                <h2><i class="fa-solid fa-bars"> </i> Dashboard</h2>
             </div>
             <div class="rectangle circle-box">
                 <div class="circle">

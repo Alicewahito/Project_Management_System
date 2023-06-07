@@ -1,0 +1,56 @@
+.content{
+    flex-grow: 1;
+}
+.rectangle{
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: white;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+button {
+    width: 150px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    background: #174380;
+    margin-right: 35px;
+    margin-top: 15px;
+}
+.allocation{
+    width: 100%;
+    height: 47px;
+    color: black;
+    background-color: white;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+.allocationDetails{
+    width: 100%;
+    height: 500px;
+    border-radius: 25px;
+    padding: 10px;
+
+}
+.allocationDetails h2{
+    text-align:center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #f2f2f2;
+}

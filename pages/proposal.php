@@ -5,6 +5,7 @@
     <title>ProjectHub | Proposal</title>
     <link href="../css/main.css" rel="stylesheet"/>
     <link href="../css/proposal.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4d187605a0.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <?php
