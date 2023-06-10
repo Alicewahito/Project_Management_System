@@ -1,0 +1,56 @@
+body{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),url("../images/backgroundImage.jpg");
+    background-size: cover;
+}
+.studentSignup{
+    position: relative;
+    width: 428px;
+    height: fit-content;
+    background: #F5F5F5;
+    border-radius: 25px;
+    margin: 10% auto;
+    padding: 10px 0;
+    text-align: center;
+}
+#logo{
+    width: 100px;
+    height: 100px;
+}
+.signupOption{
+    margin: 15px 0 10px;
+    display: flex;
+    border-style: solid;
+    border-width: thin;
+}
+.student{
+    background-color: #174E80;
+    width: 50%;
+    color: white;
+}
+.lecturer{
+    width: 50%;
+}
+.signupForm input, select{
+    width: 278px;
+    height: 30px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    border-style: solid;
+    margin-top: 15px;
+}
+
+.submit{
+    width: 139px;
+    height: 40px;
+    background: #174E80;
+    border: 1px solid #000000;
+    color: #F5F5F5;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+a{
+    color: darkred;
+}
+#lecturerSignupForm{
+    display: none;
+}
