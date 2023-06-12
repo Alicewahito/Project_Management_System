@@ -2,8 +2,9 @@
 .container{
     display: flex;
 }
-.container div{
-    margin-right: 70px;
+.content{
+    margin-left: 50px;
+    flex-grow:1;
 }
 .rectangle{
     width: 100%;
@@ -11,7 +12,7 @@
     background-color: white;
 }
 .implementation{
-    width: 100%;
+    width: 90%;
     height: 47px;
     color: black;
     background-color: white;
@@ -22,15 +23,30 @@
     margin-top: 10px;
 }
 .implementationDetails{
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
     height: 470px;
     border-radius: 25px;
     padding: 10px;
 }
 .implementationDetails h2{
+    flex: 0 0 100%;
     text-align:center;
 }
-.chooseFile{
+.implementationDetails h3{
+    font-weight: bold;
+    font-size: medium;
+}
+.set{
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+}
+.implementationDetails h3, p{
+    margin: 0;
+    display: inline;
+}
+#uploadFile{
     background-color:#D9D9D9;
     border-radius: 5px;
 }
@@ -44,6 +60,11 @@
     display: block;
     margin-bottom: 30px;
 }
+label{
+    font-weight: bold;
+    font-size: medium;
+}
+
 #submit{
     width: 186px;
     height: 30px;

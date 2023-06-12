@@ -73,7 +73,7 @@ header{
     margin: 10px;
     background: #FFFFFF;
     width: 250px;
-    height: calc(100vh - 88px);
+    height: 600px;
     border-radius:30px;
 }
 

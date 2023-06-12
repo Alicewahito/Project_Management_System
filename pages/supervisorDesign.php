@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>ProjectHub | System Design </title>
-    <link href="../css/main.css" rel="stylesheet"/>
     <link href="../css/supervisorDesign.css" rel="stylesheet">
+    <?php
+    require_once "../reusables/navigationBar.php"
+    ?>
 </head>
 <body>
 <?php

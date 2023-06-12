@@ -23,16 +23,16 @@
             </div>
             <div class="rectangle circle-box">
                 <div class="circle">
-                    <p>Task Description 1</p>
-                    <h1>Total Tasks</h1>
+                    <p>10</p>
+                    <h3>Total Tasks</h3>
                 </div>
                 <div class="circle">
-                    <p>Task Description 2</p>
-                    <h1>Total Tasks</h1>
+                    <p>10</p>
+                    <h3>Reviewed Tasks</h3>
                 </div>
                 <div class="circle">
-                    <p>Task Description 3</p>
-                    <h1>Total Tasks</h1>
+                    <p>10</p>
+                    <h3>Pending Tasks</h3>
                 </div>
             </div>
             <div class="list-container rectangle">

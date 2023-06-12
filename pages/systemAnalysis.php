@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>ProjectHub |System Analysis</title>
-    <link href="../css/main.css" rel="stylesheet"/>
   <link href="../css/systemAnalysis.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/4d187605a0.js" crossorigin="anonymous"></script>
+    <?php
+    require_once "../reusables/head.php"
+    ?>
 
 </head>
 <body>
@@ -16,13 +17,22 @@
     <?php
     require_once "../reusables/navigationBar.php"
     ?>
-    <div>
+    <div class="content">
         <div class="analysis rectangle">System Analysis</div>
         <div class="analysisDetails rectangle">
             <h2>System Analysis</h2>
-            <p>Deadline: 12th May 2023</p>
-            <p>Supervisor's Name: Mr. AAAAAA</p>
-            <p>Project Title: sdjhfjrhuhf system</p>
+            <div class="set">
+                <h3>Deadline: </h3>
+                <p>12th May 2023</p>
+            </div>
+            <div class="set">
+                <h3>Supervisor's Name: </h3>
+                <p>Mr. AAAAAA</p>
+            </div>
+            <div class="set">
+                <h3>Project Title:</h3>
+                <p>sdjhfjrhuhf system</p>
+            </div>
             <form>
                 <div class="form-row">
                     <label id="upload" for="uploadFile">Upload File:</label><input type="file" id="uploadFile" name="uploadFile">

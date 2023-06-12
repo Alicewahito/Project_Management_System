@@ -15,13 +15,22 @@
     <?php
     require_once "../reusables/navigationBar.php"
     ?>
-    <div>
+    <div class="content">
         <div class="proposal rectangle">Proposal</div>
         <div class="proposalDetails rectangle">
             <h2>Proposal</h2>
-            <p>Deadline: 12th May 2023</p>
-            <p>Supervisor's Name: Mr. AAAAAA</p>
-            <p>Project Title: sdjhfjrhuhf system</p>
+            <div class="set">
+                <h3>Deadline: </h3>
+                <p>12th May 2023</p>
+            </div>
+            <div class="set">
+                <h3>Supervisor's Name: </h3>
+                <p>Mr. AAAAAA</p>
+            </div>
+            <div class="set">
+                <h3>Project Title: </h3>
+                <p>sdjhfjrhuhf system</p>
+            </div>
             <form>
                 <div class="form-row">
                     <label id="upload" for="uploadFile">Upload File:</label><input type="file" id="uploadFile" name="uploadFile">

@@ -2,8 +2,9 @@
 .container{
     display: flex;
 }
-.container div{
-    margin-right: 70px;
+.content{
+    margin-left: 50px;
+    flex-grow:1;
 }
 
 .rectangle{
@@ -12,7 +13,7 @@
     background-color: white;
 }
 .design{
-    width: 100%;
+    width: 90%;
     height: 47px;
     color: black;
     background-color: white;
@@ -23,14 +24,29 @@
     margin-top: 10px;
 }
 .designDetails{
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
     height: 470px;
     border-radius: 25px;
     padding: 10px;
 
 }
 .designDetails h2{
+    flex: 0 0 100%;
     text-align:center;
+}
+.designDetails h3{
+    font-weight: bold;
+    font-size: medium;
+}
+.set{
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+}
+.designDetails h3, p{
+    margin: 0;
+    display: inline;
 }
 form{
     display: inline;

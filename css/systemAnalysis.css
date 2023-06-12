@@ -2,8 +2,9 @@
 .container{
     display: flex;
 }
-.container div{
-    margin-right: 70px;
+.content{
+    margin-left: 50px;
+    flex-grow:1;
 }
 
 .rectangle{
@@ -12,7 +13,7 @@
     background-color: white;
 }
 .analysis{
-    width: 100%;
+    width:90%;
     height: 47px;
     color: black;
     background-color: white;
@@ -23,14 +24,29 @@
     margin-top: 10px;
 }
 .analysisDetails{
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
     height: 470px;
     border-radius: 25px;
-    padding: 10px;
+    padding: 10px 40px;
 
 }
 .analysisDetails h2{
+    flex: 0 0 100%;
     text-align:center;
+}
+.analysisDetails h3{
+    font-weight: bold;
+    font-size: medium;
+}
+.set{
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+}
+.analysisDetails h3, p{
+    margin: 0;
+    display: inline;
 }
 form{
     display: inline;
