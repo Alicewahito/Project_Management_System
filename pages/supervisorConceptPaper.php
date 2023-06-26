@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>ProjectHub | Concept Paper</title>
-    <link href="../css/main.css" rel="stylesheet"/>
   <link href="../css/supervisorConceptPaper.css" rel="stylesheet">
+    <?php
+    require_once "../reusables/head.php"
+    ?>
 </head>
 <body>
     <?php
@@ -12,7 +14,7 @@
     ?>
 <div class="container">
     <?php
-    require_once "../reusables/navigationBar.php"
+    require_once "../reusables/supervisorNavigationBar.php"
     ?>
   <div class="content">
     <div class="conceptPaper rectangle">Concept Paper</div>

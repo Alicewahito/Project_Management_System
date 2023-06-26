@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>ProjectHub | System Analysis</title>
-    <link href="../css/main.css" rel="stylesheet"/>
     <link href="../css/supervisorAnalysis.css" rel="stylesheet">
+    <?php
+    require_once "../reusables/head.php"
+    ?>
 </head>
 <body>
 <?php
@@ -12,7 +14,7 @@ require_once "../reusables/header.php"
 ?>
 <div class="container">
     <?php
-    require_once "../reusables/navigationBar.php"
+    require_once "../reusables/supervisorNavigationBar.php"
     ?>
     <div class="content">
         <div class="analysis rectangle">System Analysis</div>
