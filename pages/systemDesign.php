@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>ProjectHub |System Design</title>
-    <link href="../css/systemDesign.css" rel="stylesheet" />
+    <link href="../css/systemDesign.css" rel="stylesheet">
     <?php
-    require_once "../reusables/navigationBar.php"
+    require_once "../reusables/head.php"
     ?>
 </head>
 <body>
