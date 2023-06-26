@@ -35,7 +35,10 @@ body{
     color: #F5F5F5;
     border-radius: 10px;
 }
-
+#login a{
+    color: black;
+    text-decoration: none;
+}
 p{
     left:150px;
     top: 400px;
