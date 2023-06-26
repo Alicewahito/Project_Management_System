@@ -11,7 +11,7 @@
     <?php
     require_once "../reusables/header.php"
     ?>
-<div class="container">
+<div class="main-container">
     <?php
     require_once "../reusables/navigationBar.php"
     ?>

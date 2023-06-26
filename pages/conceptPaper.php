@@ -12,7 +12,7 @@
     <?php
 require_once "../reusables/header.php"
     ?>
-  <div class="container">
+  <div class="main-container">
       <?php
       require_once "../reusables/navigationBar.php"
       ?>
@@ -28,17 +28,19 @@ require_once "../reusables/header.php"
           <h3>Supervisor's Name:</h3>
           <p>Mr. AAAAAA</p>
         </div>
-          <div class="set">
-             <h3>Project Title: </h3>
-            <p>sdjhfjrhuhf system</p>
-          </div>
         <form>
+            <div class="form-row">
+                <label for="proposed_title"> Proposed Project Title:</label><input id="proposed_title" type="text" name="proposed_title">
+            </div>
           <div class="form-row">
-            <label id="upload" for="uploadFile">Upload File:</label><input type="file" id="uploadFile" name="uploadFile">
+            <label for="description">Problem Description and Justification:</label><input type="text" id="description" name="description">
           </div>
             <div class="form-row">
-            <label for="description" >Description:</label><input id="description" name="description">
+            <label for="solution" >Proposed Solution:</label><input id="solution" name="solution">
           </div>
+            <div class="form-row">
+                <label for="tools" >Proposed Tools for Solution:</label><input id="tools" name="tools">
+            </div>
             <button id="submit" type="submit">Submit</button>
         </form>
       </div>
