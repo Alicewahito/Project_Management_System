@@ -1,0 +1,61 @@
+.main-container{
+    display: flex;
+}
+.content{
+    margin: 20px;
+    flex-grow:1;
+    background-color: white;
+    border-radius: 25px;
+}
+.add-task{
+    width: 10%;
+margin-left: 80%;
+    margin-top: 3%;
+    background-color: #BFD0FD;
+    color: #174380;
+    border: 0;
+    font-weight: bolder;
+}
+table{
+    background-color: #EAE8E8;
+    width: 95%;
+    height: 80%;
+    margin: 25px;
+}
+
+ td {
+    padding: 8px;
+    text-align: left;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.task-row {
+    background-color: white;
+    border-radius: 25px;
+}
+
+.task-row .task {
+    color: black;
+    padding: 6px;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+.save-button {
+    width: 70px;
+    height: 40px;
+    background-color: #3B59A6;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+}

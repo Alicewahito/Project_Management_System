@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Student Signup</title>
     <link href="../css/signup.css" rel="stylesheet" />
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+    <script src="/js/validation.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
@@ -17,13 +19,12 @@
             <p>Lecturer Signup</p>
         </div>
     </div>
-    <form id="studentSignupForm" class="signupForm">
+    <form id="studentSignupForm" class="signupForm" method="../php/signup.php" method="post" novalidate>
         <input name="firstName" placeholder="firstName" type="text" required />
         <input name="lastName" placeholder="lastName" type="text" required />
         <input name="regNo" placeholder="RegNumber" type="text" required />
         <input name="email" placeholder="Emailaddress" type="email" required />
         <select name="class">
-<!--            <option>Class</option>-->
             <option value="computerScience">Computer Science</option>
             <option value="InformationTechnology">Information Technology</option>
             <option value="MathAndCompScience">Maths & Comp science</option>
@@ -32,7 +33,7 @@
         <input name="confirmPassword" placeholder="confirmPassword" type="password" required />
         <button name="register" type="submit" class="submit">SignUp</button>
   </form>
-    <form id="lecturerSignupForm" class="signupForm">
+    <form id="lecturerSignupForm" class="signupForm" action="../php/signup.php" method="post">
         <input name="firstName" placeholder="firstName" type="text" required />
         <input name="lastName" placeholder="lastName" type="text" required />
         <input name="staffNo" placeholder="staffNumber" type="text" required />
@@ -41,7 +42,7 @@
         <input name="confirmPassword" placeholder="confirmPassword" type="password" required />
         <button name="register" type="submit" class="submit">SignUp</button>
     </form>
-    <p>Already have an account?<a href="loginPage.html">click here</a></p>
+    <p>Already have an account?<a href="loginPage.php">click here</a></p>
 </div>
 </body>
 <script src="../Javascripts/Signup.js"></script>
