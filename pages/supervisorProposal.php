@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ProjectHub | Proposal</title>
-    <link href="../css/supervisorProposal.css" rel="stylesheet">
+    <link href="../css/CoordinatorProposal.css" rel="stylesheet">
     <?php
     require_once "../reusables/head.php"
     ?>
@@ -31,61 +31,61 @@ require_once "../reusables/header.php"
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorProposalSubmission.php">view </a></p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorProposalSubmission.php">view </a></p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorProposalSubmission.php">view </a></p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorProposalSubmission.php">view </a></p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorProposalSubmission.php">view </a></p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorProposalSubmission.php">view </a></p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorProposalSubmission.php">view </a></p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorProposalSubmission.php">view </a></p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorProposalSubmission.php">view </a></p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorProposalSubmission.php">view </a></p>
                 </div>
             </div>
         </div>

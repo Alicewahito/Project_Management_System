@@ -19,7 +19,7 @@
             <p>Lecturer Signup</p>
         </div>
     </div>
-    <form id="studentSignupForm" class="signupForm" method="../php/signup.php" method="post" novalidate>
+    <form id="studentSignupForm" class="signupForm" method="../php/signup.php" method="post" onsubmit="studentSignup(event)" novalidate>
         <input name="firstName" placeholder="firstName" type="text" required />
         <input name="lastName" placeholder="lastName" type="text" required />
         <input name="regNo" placeholder="RegNumber" type="text" required />
@@ -33,16 +33,16 @@
         <input name="confirmPassword" placeholder="confirmPassword" type="password" required />
         <button name="register" type="submit" class="submit">SignUp</button>
   </form>
-    <form id="lecturerSignupForm" class="signupForm" action="../php/signup.php" method="post">
+    <form id="supervisorSignupForm" class="signupForm" action="../php/studentSignup.php" method="post" onsubmit="supervisorSignup(event)">
         <input name="firstName" placeholder="firstName" type="text" required />
         <input name="lastName" placeholder="lastName" type="text" required />
-        <input name="staffNo" placeholder="staffNumber" type="text" required />
+        <input name="staffid" placeholder="staffNumber" type="text" required />
         <input name="email" placeholder="Emailaddress" type="email" required />
         <input name="newPassword" placeholder="newPassword" type="password" required />
         <input name="confirmPassword" placeholder="confirmPassword" type="password" required />
         <button name="register" type="submit" class="submit">SignUp</button>
     </form>
-    <p>Already have an account?<a href="loginPage.php">click here</a></p>
+    <p>Already have an account?<a href="LoginStudent.php">click here</a></p>
 </div>
 </body>
 <script src="../Javascripts/Signup.js"></script>

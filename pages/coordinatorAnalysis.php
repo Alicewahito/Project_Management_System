@@ -14,7 +14,7 @@ require_once "../reusables/header.php"
 ?>
 <div class="container">
     <?php
-    require_once "../reusables/supervisorNavigationBar.php"
+    require_once "../reusables/coordinatorNavigationBar.php"
     ?>
     <div class="content">
         <div class="analysis rectangle">System Analysis</div>
@@ -31,65 +31,64 @@ require_once "../reusables/header.php"
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> <a href="supervisorAnalysisSubmission.php">view </a></p>
+                    <p> <a href="coordinatorAnalysisSubmission.php">view </a></p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> <a href="supervisorAnalysisSubmission.php">view </a></p>
+                    <p> <a href="coordinatorAnalysisSubmission.php">view </a></p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> <a href="supervisorAnalysisSubmission.php">view </a></p>
+                    <p> <a href="coordinatorAnalysisSubmission.php">view </a></p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> <a href="supervisorAnalysisSubmission.php">view </a></p>
+                    <p> <a href="coordinatorAnalysisSubmission.php">view </a></p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> <a href="supervisorAnalysisSubmission.php">view </a></p>
+                    <p> <a href="coordinatorAnalysisSubmission.php">view </a></p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> <a href="supervisorAnalysisSubmission.php">view </a></p>
+                    <p> <a href="coordinatorAnalysisSubmission.php">view </a></p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> <a href="supervisorAnalysisSubmission.php">view </a></p>
+                    <p> <a href="coordinatorAnalysisSubmission.php">view </a></p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> <a href="supervisorAnalysisSubmission.php">view </a></p>
+                    <p> <a href="coordinatorAnalysisSubmission.php">view </a></p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> <a href="supervisorAnalysisSubmission.php">view </a></p>
+                    <p> <a href="coordinatorAnalysisSubmission.php">view </a></p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> <a href="supervisorAnalysisSubmission.php">view </a></p>
+                    <p> <a href="coordinatorAnalysisSubmission.php">view </a></p>
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
-

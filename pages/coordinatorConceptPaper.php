@@ -14,7 +14,7 @@
     ?>
 <div class="container">
     <?php
-    require_once "../reusables/supervisorNavigationBar.php"
+    require_once "../reusables/coordinatorNavigationBar.php"
     ?>
   <div class="content">
     <div class="conceptPaper rectangle">Concept Paper</div>
@@ -31,61 +31,61 @@
               <p>Alice</p>
               <p> </p>
               <p></p>
-              <p> view </p>
+              <p> <a href="conceptSubmission.php">view</a> </p>
           </div>
           <div class="row">
               <p>Alice</p>
               <p> </p>
               <p></p>
-              <p> view </p>
+              <p> <a href="conceptSubmission.php">view</a> </p>
           </div>
           <div class="row">
               <p>Alice</p>
               <p> </p>
               <p></p>
-              <p> view </p>
+              <p> <a href="conceptSubmission.php">view</a> </p>
           </div>
           <div class="row">
               <p>Alice</p>
               <p> </p>
               <p></p>
-              <p> view </p>
+              <p> <a href="conceptSubmission.php">view</a> </p>
           </div>
           <div class="row">
               <p>Alice</p>
               <p> </p>
               <p></p>
-              <p> view </p>
+              <p> <a href="conceptSubmission.php">view</a> </p>
           </div>
           <div class="row">
               <p>Alice</p>
               <p> </p>
               <p></p>
-              <p> view </p>
+              <p> <a href="conceptSubmission.php">view</a> </p>
           </div>
           <div class="row">
               <p>Alice</p>
               <p> </p>
               <p></p>
-              <p> view </p>
+              <p> <a href="conceptSubmission.php">view</a> </p>
           </div>
           <div class="row">
               <p>Alice</p>
               <p> </p>
               <p></p>
-              <p> view </p>
+              <p> <a href="conceptSubmission.php">view</a> </p>
           </div>
           <div class="row">
               <p>Alice</p>
               <p> </p>
               <p></p>
-              <p> view </p>
+              <p> <a href="conceptSubmission.php">view</a> </p>
           </div>
           <div class="row">
               <p>Alice</p>
               <p> </p>
               <p></p>
-              <p> view </p>
+              <p> <a href="conceptSubmission.php">view</a> </p>
           </div>
         </div>
     </div>

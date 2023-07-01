@@ -31,64 +31,65 @@ require_once "../reusables/header.php"
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorImplementationSubmission.php">view</a> </p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorImplementationSubmission.php">view</a> </p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorImplementationSubmission.php">view</a> </p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorImplementationSubmission.php">view</a> </p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorImplementationSubmission.php">view</a> </p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorImplementationSubmission.php">view</a> </p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorImplementationSubmission.php">view</a> </p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorImplementationSubmission.php">view</a> </p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorImplementationSubmission.php">view</a> </p>
                 </div>
                 <div class="row">
                     <p>Alice</p>
                     <p> </p>
                     <p></p>
-                    <p> view </p>
+                    <p> <a href="supervisorImplementationSubmission.php">view</a> </p>
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
+
