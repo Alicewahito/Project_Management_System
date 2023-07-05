@@ -50,7 +50,7 @@ require_once "../reusables/header.php"
                     <h3> Class </h3>
                     <h3>view submissions</h3>
                 </div>
-                <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                <?php while ($row = mysqli_fetch_assoc($result)): ?>
                 <div class="row">
                     <p><?php echo $row['first_name'] . ' ' . $row['last_name']; ?></p>
                     <p><?php echo $row['project_title']; ?> </p>
@@ -111,6 +111,7 @@ require_once "../reusables/header.php"
                     <p><?php echo $row['class']; ?></p>
                     <p><a href="supervisorProposalSubmission.php?studentId=<?php echo $row['student_id']; ?>"> view </a></p>
                 </div>
+                <?php endwhile; ?>
             </div>
         </div>
     </div>

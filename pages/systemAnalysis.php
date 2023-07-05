@@ -14,13 +14,13 @@ $query = "SELECT system_analysis.deadline, CONCAT(supervisor.first_name, ' ', su
           JOIN supervisor ON system_analysis.staff_id = supervisor.staff_ID
           JOIN students ON system_analysis.student_id = students.student_regNo
           WHERE system_analysis.student_id = '$student_Id'";
-$result = mysqli_query($conn, $query);
+$result = mysqli_query($mysqli, $query);
 $row = mysqli_fetch_assoc($result);
 
 if (!$row) {
     die("Error retrieving system analysis details: " . mysqli_error($conn));
 }
-$staff
+
 $deadline = $row['deadline'];
 $lecturerName = $row['lecturer_name'];
 $projectTitle = $row['project_title'];

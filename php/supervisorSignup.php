@@ -2,24 +2,24 @@
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-    $staffId = $_POST['staffId'];
-    $email = $_POST['email'];
+    $firstName = $_POST['first_name'];
+    $lastName = $_POST['last_name'];
+    $staffId = $_POST['staff_ID'];
+    $email = $_POST['email_address'];
     $newPassword = $_POST['newPassword'];
     $confirmPassword = $_POST['confirmPassword'];
 }
 
-if (empty($_POST["firstName"])) {
+if (empty($_POST["first_nameame"])) {
     die("Name is required");
 }
-if (empty($_POST["lastName"])) {
+if (empty($_POST["last_nameame"])) {
     die("Name is required");
 }
-if (empty($_POST["staffId"])) {
+if (empty($_POST["staff_ID"])) {
     die("staffId is required");
 }
-if ( ! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+if ( ! filter_var($_POST["email_address"], FILTER_VALIDATE_EMAIL)) {
     die("Valid email is required");
 }
 
@@ -43,7 +43,7 @@ $password_hash = password_hash($_POST["newPassword"], PASSWORD_DEFAULT);
 $mysqli = require __DIR__ . "/database.php";
 
 try{
-    $insertQuery = "INSERT INTO supervisor (firstName, lastName, staffId, email, password) VALUES ('$firstName, $lastName, $staffId, $email,$password_hash')";
+    $insertQuery = "INSERT INTO supervisor (first_name, last_name, staff_ID, email_address, password) VALUES ('$firstName, $lastName, $staffId, $email,$password_hash')";
     if (mysqli_query($mysqli, $insertQuery)){
         echo "Supervisor Registration successfully!";
     }else{

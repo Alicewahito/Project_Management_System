@@ -115,6 +115,7 @@ require_once "../reusables/header.php"
                     <p><?php echo $row['class']; ?></p>
                     <p> <a href="supervisorImplementationSubmission.php?implementation_id=<?php echo $row['implementation_id']; ?>">view</a> </p>
                 </div>
+                <?php endwhile; ?>
             </div>
         </div>
     </div>
