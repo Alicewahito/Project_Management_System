@@ -5,6 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $regNo = $_POST['regNo'];
+    $email =$_POST['email'];
     $class = $_POST['class'];
     $newPassword = $_POST['newPassword'];
     $confirmPassword = $_POST['confirmPassword'];
@@ -44,12 +45,11 @@ $password_hash = password_hash($_POST["newPassword"], PASSWORD_DEFAULT);
 
 $mysqli = require __DIR__ . "/database.php";
 
-else{
-    $insertQuery = "INSERT INTO students (firstName, lastName, regNo, email, class, password) VALUES ('$firstName, $lastName, $regNo, $email,$class, $password_hash')";
-    if (mysqli_query($conn, $query)){
+    $Query = "INSERT INTO students (firstName, lastName, regNo, email, class, password) VALUES ('$firstName, $lastName, $regNo, $email,$class, $password_hash')";
+    if (mysqli_query($mysqli, $Query)){
         echo "Student Registration successfully!";
     }else{
-        echo "Error: " . $query . "</br>" . mysqli_error($conn);
+        echo "Error: " . $Query . "</br>" . mysqli_error($mysqli);
     }
-}
+
 
