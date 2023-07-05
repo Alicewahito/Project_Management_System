@@ -32,8 +32,8 @@ if (isset ($_POST['supervisor-login-form'])){
                 <img src="../images/Logo.png" alt="logo" id="logo"/>
             </header>
 
-            <?php if (isset($error)){ ?>
-                <p> <?php echo $error; ?></p>
+            <?php if (isset($_GET["msg"])){ ?>
+                <p> <?php echo $_GET["msg"]; ?></p>
             <?php } ?>
 
             <form id="supervisor-login-form"  method="post" action="../php/supervisorLogin.php">
