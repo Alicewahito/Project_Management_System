@@ -26,7 +26,7 @@ $proposalId = ['proposal_id'];
 $studentName = $row['first_name'] . ' ' . $row['last_name'];
 $deadline = $row['deadline'];
 $submittedFile = $row['upload_file'];
-}
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get the submitted remarks

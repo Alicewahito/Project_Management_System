@@ -2,7 +2,7 @@
 session_start();
     if (isset($_SESSION['student_regNo'])){
         $student_id = $_SESSION['student_regNo'];
-    }
+
     $mysqli = require __DIR__ . "/database.php";
 
         $totalTaskQuery = "SELECT  COUNT(*) AS total_tasks
@@ -54,6 +54,7 @@ session_start();
 
 
         $pendingTasks = $totalTasks - $reviewedTasks;
+}
     else{
     header("Location: loginStudent.php");
     exit();
