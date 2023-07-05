@@ -13,13 +13,13 @@ if (!isset($_SESSION['student_regNo'])) {
               FROM concept_paper
               INNER JOIN supervisor ON concept_paper.staff_id = supervisor.staff_ID
               WHERE concept_paper.student_id = '$student_Id'";
-    $result = mysqli_query($conn, $query);
+    $result = mysqli_query($mysqli, $query);
 
 if ($result) {
-$row = mysqli_fetch_assoc($result);
-$deadline = $row['deadline'];
-$lecturerName = $row['lecturer_name'];
-
+    $row = mysqli_fetch_assoc($result);
+    $deadline = $row['deadline'];
+    $lecturerName = $row['lecturer_name'];
+}
 $submissionDate = date('Y-m-d H:i:s');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -29,23 +29,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $tools = $_POST['tools'];
 
     $updateQuery = "UPDATE students SET project_title = '$projectTitle' WHERE student_id = '$student_Id'";
-    $updateResult = mysqli_query($conn, $updateQuery);
+    $updateResult = mysqli_query($mysqli, $updateQuery);
 
     if ($updateResult) {
         echo "Project title updated successfully.<br>";
     } else {
-        echo "Error updating project title: " . mysqli_error($conn) . "<br>";
+        echo "Error updating project title: " . mysqli_error($mysqli) . "<br>";
     }
 
     $insertQuery = "INSERT INTO concept_paper (student_id, project_title, problem_description, proposed_solution, tools, date_submitted)
                     VALUES ('$student_Id', '$projectTitle', '$description', '$solution', '$tools',$submissionDate)";
 
-    if (mysqli_query($conn, $insertQuery)) {
+    if (mysqli_query($mysqli, $insertQuery)) {
         // Concept paper inserted successfully
         echo "Concept paper submitted successfully.";
     } else {
         // Error inserting concept paper
-        echo "Error submitting concept paper: " . mysqli_error($conn);
+        echo "Error submitting concept paper: " . mysqli_error($mysqli);
     }
 }
 ?>
