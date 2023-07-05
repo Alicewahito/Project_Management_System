@@ -4,9 +4,11 @@
     $student_email = $_POST['student_email'];
     $student_password = $_POST['student_password'];
 
-if (empty($student_email) || empty($student_password)){
-    echo 'Please enter both email and password.';
-    exit;
+    if (!filter_var($student_email, FILTER_VALIDATE_EMAIL)){
+        $error = "Invalid email address";
+    }
+    if (strlen($student_password) < 8){
+        $error= "Password must be atleast 8 characters";
 }
 
 $mysqli = require __DIR__ . "/database.php";
