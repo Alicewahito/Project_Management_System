@@ -36,8 +36,8 @@ if (isset ($_POST['supervisor-login-form'])){
                 <p> <?php echo $error; ?></p>
             <?php } ?>
 
-            <form id="supervisor-login-form"  method="post" onsubmit="supervisorLogin(event)">
-                <input name="supervisor_email" placeholder="Emailaddress" type="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>" required />
+            <form id="supervisor-login-form"  method="post" action="../php/supervisorLogin.php">
+                <input name="supervisor_email" placeholder="Email_address" type="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>" required />
                 <input name="supervisor_password" placeholder="password" type="password" required />
                 <button id="login" type="submit"> Login </button>
             </form>

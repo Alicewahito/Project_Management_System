@@ -1,0 +1,22 @@
+.navigation{
+    padding: 5px;
+    margin: 10px;
+    background: #FFFFFF;
+    width: 250px;
+    height: 600px;
+    border-radius:30px;
+}
+
+.navigation li{
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+}
+.navigation a{
+    text-decoration: none;
+    color: black;
+}
+.navigation ul li:active{
+    background-color: #EAE8E8;
+}

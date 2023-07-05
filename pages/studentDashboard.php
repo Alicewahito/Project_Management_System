@@ -22,17 +22,18 @@
                 <h2><i class="fa-solid fa-bars"> </i> Dashboard</h2>
             </div>
             <div class="rectangle circle-box">
+                <?php include '../php/stdDashboard.php'; ?>
                 <div class="circle">
-                    <p>10</p>
+                    <p> <? php echo $totalTasks; ?> </p>
                     <h3>Total Tasks</h3>
                 </div>
                 <div class="circle">
-                    <p>10</p>
+                    <p> <? php echo $reviewedTasks; ?> </p>
                     <h3>Reviewed Tasks</h3>
                 </div>
                 <div class="circle">
-                    <p>10</p>
-                    <h3>Pending Tasks</h3>
+                    <p> <? php echo $pendingTasks; ?> </p>
+                    <h3>PendingTasks</h3>
                 </div>
             </div>
             <div class="list-container rectangle">
@@ -42,29 +43,64 @@
                     <h3>Deadline</h3>
                 </div>
                 <div class="row">
+                    <?php
+                    $tasksQuery = "SELECT * FROM concept_paper";
+                    $tasksResult = $tasksQuery;
+                    while ($taskRow = mysqli_fetch_assoc($tasksResult)) {
+                    $deadline = $taskRow['deadline'];
+                    $status = $taskRow['status'];
+                    ?>
                     <p>Concept Paper</p>
-                    <p> Pending</p>
-                    <p>3 March 2023</p>
+                    <p> <?php echo $status; ?></p>
+                    <p><?php echo $deadline; ?></p>
                 </div>
                 <div class="row">
+                    <?php
+                    $tasksQuery = "SELECT * FROM proposal";
+                    $tasksResult = $tasksQuery;
+                    while ($taskRow = mysqli_fetch_assoc($tasksResult)) {
+                    $deadline = $taskRow['deadline'];
+                    $status = $taskRow['status'];
+                    ?>
                     <p>Proposal</p>
-                    <p> complete</p>
-                    <p>3 March 2023</p>
+                    <p> <?php echo $status; ?></p>
+                    <p> <?php echo $deadline; ?></p>
                 </div>
                 <div class="row">
+                    <?php
+                    $tasksQuery = "SELECT * FROM system_analysis";
+                    $tasksResult = $tasksQuery;
+                    while ($taskRow = mysqli_fetch_assoc($tasksResult)) {
+                    $deadline = $taskRow['deadline'];
+                    $status = $taskRow['status'];
+                    ?>
                     <p>System Analysis</p>
-                    <p> reviewed</p>
-                    <p>3 March 2023</p>
+                    <p> <?php echo $status; ?></p>
+                    <p> <?php echo $deadline; ?></p>
                 </div>
                 <div class="row">
+                    <?php
+                    $tasksQuery = "SELECT * FROM system_design";
+                    $tasksResult = $tasksQuery;
+                    while ($taskRow = mysqli_fetch_assoc($tasksResult)) {
+                    $deadline = $taskRow['deadline'];
+                    $status = $taskRow['status'];
+                    ?>
                     <p>System Design</p>
-                    <p> Pending</p>
-                    <p>3 March 2023</p>
+                    <p> <?php echo $status; ?></p>
+                    <p> <?php echo $deadline; ?></p>
                 </div>
                 <div class="row">
+                    <?php
+                    $tasksQuery = "SELECT * FROM implementation";
+                    $tasksResult = $tasksQuery;
+                    while ($taskRow = mysqli_fetch_assoc($tasksResult)) {
+                    $deadline = $taskRow['deadline'];
+                    $status = $taskRow['status'];
+                    ?>
                     <p>System Implementation</p>
-                    <p> Pending</p>
-                    <p>3 March 2023</p>
+                    <p> <?php echo $status; ?></p>
+                    <p> <?php echo $deadline; ?></p>
                 </div>
             </div>
         </div>

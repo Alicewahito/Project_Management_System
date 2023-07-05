@@ -19,7 +19,7 @@
             <p>Lecturer Signup</p>
         </div>
     </div>
-    <form id="studentSignupForm" class="signupForm" method="../php/signup.php" method="post" onsubmit="studentSignup(event)" novalidate>
+    <form id="studentSignupForm" class="signupForm" action="../php/studentSignup.php" method="post" novalidate>
         <input name="firstName" placeholder="firstName" type="text" required />
         <input name="lastName" placeholder="lastName" type="text" required />
         <input name="regNo" placeholder="RegNumber" type="text" required />
@@ -33,11 +33,11 @@
         <input name="confirmPassword" placeholder="confirmPassword" type="password" required />
         <button name="register" type="submit" class="submit">SignUp</button>
   </form>
-    <form id="supervisorSignupForm" class="signupForm" action="../php/studentSignup.php" method="post" onsubmit="supervisorSignup(event)">
+    <form id="supervisorSignupForm" class="signupForm" action="../php/supervisorSignup.php" method="post" >
         <input name="firstName" placeholder="firstName" type="text" required />
         <input name="lastName" placeholder="lastName" type="text" required />
-        <input name="staffid" placeholder="staffNumber" type="text" required />
-        <input name="email" placeholder="Emailaddress" type="email" required />
+        <input name="staffId" placeholder="staffNumber" type="text" required />
+        <input name="email" placeholder="EmailAddress" type="email" required />
         <input name="newPassword" placeholder="newPassword" type="password" required />
         <input name="confirmPassword" placeholder="confirmPassword" type="password" required />
         <button name="register" type="submit" class="submit">SignUp</button>
