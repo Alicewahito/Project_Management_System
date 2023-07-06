@@ -45,9 +45,10 @@ $password_hash = password_hash($_POST["newPassword"], PASSWORD_DEFAULT);
 
 $mysqli = require __DIR__ . "/database.php";
 
-    $Query = "INSERT INTO students (firstName, lastName, regNo, email, class, password) VALUES ('$firstName, $lastName, $regNo, $email,$class, $password_hash')";
+    $Query = "INSERT INTO students (first_name, last_name, student_regNo, email_address, class, password) VALUES ('$firstName', '$lastName', '$regNo', '$email','$class', '$password_hash')";
     if (mysqli_query($mysqli, $Query)){
-        echo "Student Registration successfully!";
+        $message = "Signed Up Successfully, kindly login";
+        header("Location: ../pages/studentLogin.php?msg=$message");
     }else{
         echo "Error: " . $Query . "</br>" . mysqli_error($mysqli);
     }
