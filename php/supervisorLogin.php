@@ -12,23 +12,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $mysqli = require __DIR__ . "/database.php";
 
-    $query = "SELECT staff_ID, first_name FROM supervisor WHERE email_address = '$supervisor_email' AND password = '$supervisor_password'";
+    $query = "SELECT * FROM supervisor WHERE email_address = '$supervisor_email'";
     $result = $mysqli->query($query);
 
     if ($result->num_rows === 1) {
         $row = $result->fetch_assoc();
         $staffID = $row['staff_ID'];
-        $supervisor_name = $row['first_name'];
+        $supervisorEmail = $row['email_address'];
+        $hashedPassword = $row['hashed_password'];
+        $firstName = $row['first_name'];
+        $lastName = $row['last_name'];
 
+        if (password_verify($supervisor_password, $hashedPassword)) {
 
-        $_SESSION['staff_ID'] = $staffID;
-        $_SESSION['first_name'] = $supervisor_name;
+            $_SESSION['staff_ID'] = $staffID;
+            $_SESSION['email_address'] = $supervisorEmail;
+            $_SESSION['email_address'] = $supervisorEmail;
+            $_SESSION['supervisorName'] = $firstName . ' ' . $lastName;
 
-        header("Location: ../pages/supervisorDashboard.php");
-        exit();
-    } else {
-        // Invalid login credentials
-        echo "Invalid email_address or password. Please try again.";
+            header("Location: ../pages/supervisorDashboard.php");
+            exit();
+        } else {
+
+            echo "Invalid email_address or password. Please try again.";
+        }
     }
 }
-

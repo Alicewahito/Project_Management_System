@@ -1,37 +1,42 @@
 <?php
     session_start();
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $student_email = $_POST['student_email'];
-    $student_password = $_POST['student_password'];
+        $student_email = $_POST['student_email'];
+        $student_password = $_POST['student_password'];
 
-if (empty($student_email) || empty($student_password)){
-    echo 'Please enter both email and password.';
-    exit;
-}
+        if (empty($student_email) || empty($student_password)) {
+            echo 'Please enter both email and password.';
+            exit;
+        }
 
-$mysqli = require __DIR__ . "/database.php";
+        $mysqli = require __DIR__ . "/database.php";
 
-$query = "SELECT student_regNo, first_name FROM students WHERE email_address = '$student_email' AND password = '$student_password'";
-$result = $mysqli->query($query);
+        $query = "SELECT * FROM students WHERE email_address = '$student_email'";
+        $result = $mysqli->query($query);
 
-if ($result->num_rows === 1) {
-    $row = $result->fetch_assoc();
-    $student_id = $row['student_regNo'];
-    $student_name = $row['first_name'];
+        if ($result->num_rows === 1) {
+            $row = $result->fetch_assoc();
+            $studentId = $row['student_regNo'];
+            $studentEmail = $row['email_address'];
+            $hashedPassword = $row['hashed_password'];
+            $firstName = $row['first_name'];
+            $lastName = $row['last_name'];
 
+            if (password_verify($student_password, $hashedPassword)) {
+                // Password is correct
+                $_SESSION['student_regNo'] = $studentId;
+                $_SESSION['studentEmail'] = $studentEmail;
+                $_SESSION['email_address'] = $studentEmail;
+                $_SESSION['studentName'] = $firstName . ' ' . $lastName;
 
-    $_SESSION['student_regNo'] = $student_id;
-    $_SESSION['first_name'] = $student_name;
+                header("Location: ../pages/studentDashboard.php");
+                exit();
+            } else {
 
-    // Redirect to the student dashboard or any other desired page
-    header("Location: ../pages/studentDashboard.php");
-    exit();
-} else {
-    // Invalid login credentials
-    echo "Invalid email_address or password. Please try again.";
-}
-}
-
+                echo "Invalid email or password. Please try again.";
+            }
+        }
+    }
 
 
 

@@ -4,7 +4,7 @@ $host = "localhost";
 $dsn = 'mysql:host=127.0.0.1;dbname=project_hub';
 $database = "project_hub";
 $username = "root";
-$password = "DB@local2022";
+$password = "";
 
 $mysqli = new mysqli($host, $username, $password, $database);
 
@@ -14,7 +14,7 @@ if ($mysqli->connect_errno) {
 
 return $mysqli;
 
-
+//
 //try{
 //    $db = new PDO(
 //        $dsn,
