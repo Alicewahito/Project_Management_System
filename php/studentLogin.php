@@ -5,8 +5,9 @@
         $student_password = $_POST['student_password'];
 
         if (empty($student_email) || empty($student_password)) {
-            echo 'Please enter both email and password.';
-            exit;
+            $message = 'Please enter both email and password.';
+            header("Location: ../studentPages/loginStudent.php?msg=$message");
+            exit();
         }
 
         $mysqli = require __DIR__ . "/database.php";
@@ -14,11 +15,11 @@
         $query = "SELECT * FROM students WHERE email_address = '$student_email'";
         $result = $mysqli->query($query);
 
-        if ($result->num_rows === 1) {
+        if ($result) {
             $row = $result->fetch_assoc();
             $studentId = $row['student_regNo'];
             $studentEmail = $row['email_address'];
-            $hashedPassword = $row['hashed_password'];
+            $hashedPassword = $row['password'];
             $firstName = $row['first_name'];
             $lastName = $row['last_name'];
 
@@ -29,13 +30,20 @@
                 $_SESSION['email_address'] = $studentEmail;
                 $_SESSION['studentName'] = $firstName . ' ' . $lastName;
 
-                header("Location: ../pages/studentDashboard.php");
+                header("Location: ../studentPages/studentDashboard.php");
                 exit();
             } else {
 
-                echo "Invalid email or password. Please try again.";
+                $message = "Incorrect password. Please try again.";
+                header("Location: ../studentPages/loginStudent.php?msg=$message");
+                exit();
             }
+        }else{
+            $message = "Please try again.";
+            header("Location: ../studentPages/loginStudent.php?msg=$message");
+            exit();
         }
+
     }
 
 

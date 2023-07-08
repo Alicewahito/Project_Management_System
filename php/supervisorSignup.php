@@ -11,32 +11,48 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 if (empty($_POST["firstName"])) {
-    die("First Name is required");
+    $message = "First Name is required";
+    header("Location: ../studentPages/userSignup.php?msg=$message");
+    exit();
 }
 if (empty($_POST["lastName"])) {
-    die("Last Name is required");
+    $message = "Last Name is required";
+    header("Location: ../studentPages/userSignup.php?msg=$message");
+    exit();
 }
 if (empty($_POST["staffId"])) {
-    die("staffId is required");
+    $message = "staffId is required";
+    header("Location: ../studentPages/userSignup.php?msg=$message");
+    exit();
 }
 if ( ! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-    die("Valid email is required");
+    $message = "Valid email is required";
+    header("Location: ../studentPages/userSignup.php?msg=$message");
+    exit();
 }
 
 if (strlen($_POST["newPassword"]) < 8) {
-    die("Password must be at least 8 characters");
+    $message = "Password must be at least 8 characters";
+    header("Location: ../studentPages/userSignup.php?msg=$message");
+    exit();
 }
 
 if ( ! preg_match("/[a-z]/i", $_POST["newPassword"])) {
-    die("Password must contain at least one letter");
+    $message = "Password must contain at least one letter";
+    header("Location: ../studentPages/userSignup.php?msg=$message");
+    exit();
 }
 
 if ( ! preg_match("/[0-9]/", $_POST["newPassword"])) {
-    die("Password must contain at least one number");
+    $message = "Password must contain at least one number";
+    header("Location: ../studentPages/userSignup.php?msg=$message");
+    exit();
 }
 
 if ($_POST["newPassword"] !== $_POST["confirmPassword"]) {
-    die("Passwords must match");
+    $message = "Passwords must match";
+    header("Location: ../studentPages/userSignup.php?msg=$message");
+    exit();
 }
 $password_hash = password_hash($_POST["newPassword"], PASSWORD_DEFAULT);
 
@@ -46,9 +62,11 @@ try{
     $insertQuery = "INSERT INTO supervisor (first_name, last_name, staff_ID, email_address, password) VALUES ('$firstName', '$lastName', '$staffId', '$email','$password_hash')";
     if (mysqli_query($mysqli, $insertQuery)){
         $message = "Signed Up Successfully, kindly login";
-        header("Location: ../pages/loginSupervisor.php?msg=$message");
+        header("Location: ../studentPages/loginSupervisor.php?msg=$message");
     }else{
-        echo "Error: " . $insertQuery . "</br>" . mysqli_error($mysqli);
+        $message = "Error: " . $insertQuery . "</br>" . mysqli_error($mysqli);
+        header("Location: ../studentPages/userSignup.php?msg=$message");
+        exit();
     }
 }catch (Exception $e)
 {

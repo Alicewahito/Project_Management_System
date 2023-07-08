@@ -6,8 +6,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $supervisor_password = $_POST['supervisor_password'];
 
     if (empty($supervisor_email) || empty($supervisor_password)) {
-        echo 'Please enter both email and password.';
-        exit;
+        $message = 'Please enter both email and password.';
+        header("Location: ../supervisorPages/loginSupervisor.php?msg=$message");
+        exit();
     }
 
     $mysqli = require __DIR__ . "/database.php";
@@ -15,11 +16,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $query = "SELECT * FROM supervisor WHERE email_address = '$supervisor_email'";
     $result = $mysqli->query($query);
 
-    if ($result->num_rows === 1) {
+    if ($result) {
         $row = $result->fetch_assoc();
         $staffID = $row['staff_ID'];
         $supervisorEmail = $row['email_address'];
-        $hashedPassword = $row['hashed_password'];
+        $hashedPassword = $row['password'];
         $firstName = $row['first_name'];
         $lastName = $row['last_name'];
 
@@ -30,11 +31,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['email_address'] = $supervisorEmail;
             $_SESSION['supervisorName'] = $firstName . ' ' . $lastName;
 
-            header("Location: ../pages/supervisorDashboard.php");
+            header("Location: ../supervisorPages/supervisorDashboard.php");
             exit();
         } else {
-
-            echo "Invalid email_address or password. Please try again.";
+            $message = "Incorrect password. Please try again.";
+            header("Location: ../supervisorPages/loginSupervisor.php?msg=$message");
+            exit();
         }
+
+    }
+    else{
+        $message = "Please try again.";
+        header("Location: ../supervisorPages/loginSupervisor.php?msg=$message");
+        exit();
     }
 }

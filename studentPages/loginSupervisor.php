@@ -1,21 +1,3 @@
-<?php
-
-session_start();
-if (isset ($_POST['supervisor-login-form'])){
-    $supervisor_email = $_POST['supervisor_email'];
-    $supervisor_password = $_POST['supervisor_password'];
-    if($supervisor_email === 'email' && $supervisor_password === 'password'){
-        $_SESSION['loggedin'] = true;
-        $_SESSION['user_type'] = 'supervisor';
-
-        header("Location: ../pages/supervisorDashboard.php");
-        exit;
-    }else{
-        $error = 'Invalid username or password';
-    }
-}
-
-?>
 
 
 <!DOCTYPE html>

@@ -12,6 +12,9 @@
         <header>
             <img src="../images/Logo.png" alt="logo" id="logo"/>
         </header>
+        <?php if (isset($_GET["msg"])){ ?>
+            <p> <?php echo $_GET["msg"]; ?></p>
+        <?php } ?>
         <form id="student-login-form"  method="post" action="../php/studentLogin.php">
                 <input name="student_email" placeholder="Email_address" type="email"  required >
                 <input name="student_password" placeholder="password" type="password" required >

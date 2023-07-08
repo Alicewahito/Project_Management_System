@@ -12,34 +12,52 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 if (empty($_POST["firstName"])) {
-    die("Name is required");
+    $message = "First Name is required";
+    header("Location: ../studentPages/userSignup.php?msg=$message");
+    exit();
 }
 if (empty($_POST["lastName"])) {
-    die("Name is required");
+    $message = "Last Name is required";
+    header("Location: ../studentPages/userSignup.php?msg=$message");
+    exit();
 }
 if (empty($_POST["regNo"])) {
-    die("registration Number is required");
+    $message = "Registration Number is required";
+    header("Location: ../studentPages/userSignup.php?msg=$message");
+    exit();
 }
 if ( ! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-    die("Valid email is required");
+    $message = "Valid email is required";
+    header("Location: ../studentPages/userSignup.php?msg=$message");
+    exit();
 }
 if (empty($_POST["class"])) {
-    die("class is required");
+    $message = "Class is required";
+    header("Location: ../studentPages/userSignup.php?msg=$message");
+    exit();
 }
 if (strlen($_POST["newPassword"]) < 8) {
-    die("Password must be at least 8 characters");
+    $message = "Password must be at least 8 characters";
+    header("Location: ../studentPages/userSignup.php?msg=$message");
+    exit();
 }
 
 if ( ! preg_match("/[a-z]/i", $_POST["newPassword"])) {
-    die("Password must contain at least one letter");
+    $message = "Password must contain at least one letter";
+    header("Location: ../studentPages/userSignup.php?msg=$message");
+    exit();
 }
 
 if ( ! preg_match("/[0-9]/", $_POST["newPassword"])) {
-    die("Password must contain at least one number");
+    $message = "Password must contain at least one number";
+    header("Location: ../studentPages/userSignup.php?msg=$message");
+    exit();
 }
 
 if ($_POST["newPassword"] !== $_POST["confirmPassword"]) {
-    die("Passwords must match");
+    $message = "Passwords must match";
+    header("Location: ../studentPages/userSignup.php?msg=$message");
+    exit();
 }
 $password_hash = password_hash($_POST["newPassword"], PASSWORD_DEFAULT);
 
@@ -48,9 +66,11 @@ $mysqli = require __DIR__ . "/database.php";
     $Query = "INSERT INTO students (first_name, last_name, student_regNo, email_address, class, password) VALUES ('$firstName', '$lastName', '$regNo', '$email','$class', '$password_hash')";
     if (mysqli_query($mysqli, $Query)){
         $message = "Signed Up Successfully, kindly login";
-        header("Location: ../pages/studentLogin.php?msg=$message");
+        header("Location: ../studentPages/loginStudent.php?msg=$message");
     }else{
-        echo "Error: " . $Query . "</br>" . mysqli_error($mysqli);
+        $message = "Error: " . $Query . "</br>" . mysqli_error($mysqli);
+        header("Location: ../studentPages/userSignup.php?msg=$message");
+        exit();
     }
 
 

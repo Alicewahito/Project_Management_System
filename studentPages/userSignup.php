@@ -27,7 +27,6 @@
         <select name="class">
             <option value="computerScience">Computer Science</option>
             <option value="InformationTechnology">Information Technology</option>
-            <option value="MathAndCompScience">Maths & Comp science</option>
         </select>
         <input name="newPassword" placeholder="newPassword" type="password" required />
         <input name="confirmPassword" placeholder="confirmPassword" type="password" required />
@@ -42,7 +41,7 @@
         <input name="confirmPassword" placeholder="confirmPassword" type="password" required />
         <button name="register" type="submit" class="submit">SignUp</button>
     </form>
-    <p>Already have an account?<a href="LoginStudent.php">click here</a></p>
+    <p>Already have an account?<a href="loginStudent.php">click here</a></p>
 </div>
 </body>
 <script src="../Javascripts/Signup.js"></script>

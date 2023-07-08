@@ -33,7 +33,7 @@ if (isset($_SESSION["firstName"])) {
 
 <?php else: ?>
 
-    <p><a href="../pages/LoginStudent.php">Log in</a> or <a href="../pages/userSignup.php">sign up</a></p>
+    <p><a href="../studentPages/loginStudent.php">Log in</a> or <a href="../studentPages/userSignup.php">sign up</a></p>
 
 <?php endif; ?>
 
